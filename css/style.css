@@ -446,3 +446,32 @@ footer {
   position: relative;
   z-index: 1;
 }
+
+.scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 8, 15, 0.92) 0%,
+            rgba(5, 8, 15, 0.72) 45%,
+            rgba(5, 8, 15, 0.45) 100%
+        );
+
+    backdrop-filter: blur(3px);
+}
