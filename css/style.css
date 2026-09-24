@@ -427,3 +427,22 @@ footer {
     }
 
 }
+.hero {
+  position: relative;
+  background-image: url('/assets/image/fondo.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 10, 25, 0.65);
+  backdrop-filter: blur(3px);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
