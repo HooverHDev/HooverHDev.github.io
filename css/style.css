@@ -545,3 +545,15 @@ footer {
     object-fit: cover;
     object-position: top;
 }
+.tech-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+}
+
+.tech-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
