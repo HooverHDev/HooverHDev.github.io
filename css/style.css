@@ -557,3 +557,91 @@ footer {
     object-fit: contain;
     display: block;
 }
+
+/* ========================= CERTIFICATES ========================= */
+.cert-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.cert-group-title {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 40px 0 20px;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Tarjeta base */
+.cert-card {
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 20px;
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    cursor: default;
+}
+
+/* Animación al pasar el mouse */
+.cert-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent);
+}
+
+/* Icono dentro de la tarjeta */
+.cert-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(124, 140, 255, 0.1);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.cert-card:hover .cert-icon {
+    background: rgba(124, 140, 255, 0.2);
+}
+
+.cert-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Título del certificado */
+.cert-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+/* Emisor y metadatos */
+.cert-issuer {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.cert-meta {
+    font-size: 0.75rem;
+    color: var(--accent-light);
+    font-weight: 500;
+}
