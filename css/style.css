@@ -646,3 +646,110 @@ footer {
     color: var(--accent-light);
     font-weight: 500;
 }
+
+/* ========================= PROJECTS ========================= */
+.projects-section {
+    background: var(--bg);
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    max-width: 640px;
+    margin: 0 0 40px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 40px;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    align-items: start;
+}
+
+.project-preview img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    object-fit: cover;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.project-summary {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.project-subheading {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-light);
+    margin: 20px 0 10px;
+}
+
+.project-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+.project-features li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.project-features li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.project-tags span {
+    background: rgba(124, 140, 255, 0.1);
+    color: var(--accent-light);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(124, 140, 255, 0.2);
+}
+
+.project-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Responsive: en pantallas pequeñas, una sola columna */
+@media (max-width: 768px) {
+    .project-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+    }
+}
+
