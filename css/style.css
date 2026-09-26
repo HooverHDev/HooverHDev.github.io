@@ -602,28 +602,29 @@ footer {
 }
 
 /* Icono dentro de la tarjeta */
+/* Icono dentro de la tarjeta */
 .cert-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 16px;
+    width: 100%;       /* Ocupa el ancho de la tarjeta */
+    height: 120px;     /* Altura fija para que todas las tarjetas sean iguales */
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(124, 140, 255, 0.1);
+    background: transparent; /* Quitamos el fondo para que se vean los badges */
     border-radius: 8px;
-    transition: background 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
+/* Animación sutil para el icono al pasar el mouse */
 .cert-card:hover .cert-icon {
-    background: rgba(124, 140, 255, 0.2);
+    transform: scale(1.05);
 }
 
 .cert-icon img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Evita que las imágenes se deformen */
 }
-
 /* Título del certificado */
 .cert-card h4 {
     font-size: 1rem;
