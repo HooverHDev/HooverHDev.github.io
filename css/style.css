@@ -924,3 +924,127 @@ footer {
         opacity: 1;
     }
 }
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.skills-group {
+    margin-top: 50px;
+}
+
+.skills-group:first-of-type {
+    margin-top: 35px;
+}
+
+.skills-group-title {
+    margin-bottom: 22px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* HABILIDADES TÉCNICAS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.skill-card {
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    background: var(--surface-light);
+}
+
+.skill-card h4 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    color: var(--text);
+}
+
+.skill-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* HABILIDADES BLANDAS */
+
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.soft-skill {
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.soft-skill:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.soft-skill h4 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.soft-skill p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   RESPONSIVE - HABILIDADES
+========================= */
+
+@media (max-width: 800px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .soft-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card,
+    .soft-skill {
+        padding: 22px;
+    }
+
+}
